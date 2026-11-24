@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "work": "WORK",
+    "about": "ABOUT",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "eyebrow": "SÃO PAULO, BRAZIL — EST. 2007",
+    "headline": "Cinematic production for <em><strong class=\"evs-hero-brands\">brands</strong></em> and <em>international</em> teams.",
+    "internationalLabel": "international"
+  },
+  "about": {
+    "sectionLabel": "ABOUT / SERVICES",
+    "directorTitle": "DIRECTOR & EXECUTIVE PRODUCER",
+    "name": "Erick De Vasconcelos",
+    "body1": "Erick De Vasconcelos is a director and executive producer based in São Paulo.",
+    "body2": "His work combines cinematic storytelling with large-scale production experience across branded content, documentaries and international productions.",
+    "body3": "Over the years, he has collaborated with global brands, agencies and production teams across Brazil and abroad.",
+    "studioBody": "The studio combines cinematic direction with operational execution across pre-production, production and post.",
+    "servicesBody": "EVS also supports international productions filming in Brazil through local coordination and production services.",
+    "tags": {
+      "saoPaulo": "SÃO PAULO",
+      "brazilInternational": "BRAZIL & INTERNATIONAL"
+    }
+  },
+  "services": {
+    "sectionLabel": "ABOUT / SERVICES",
+    "items": [
+      {
+        "title": "Branded & Institutional",
+        "desc": "Films for brands, agencies and marketing teams. Concept to delivery.",
+        "icon": "frame"
+      },
+      {
+        "title": "Live & Event",
+        "desc": "On-site content production for events, launches and brand activations.",
+        "icon": "pulse"
+      },
+      {
+        "title": "International Production",
+        "desc": "Local production partner for international crews filming across Brazil.",
+        "icon": "route"
+      }
+    ]
+  },
+  "work": {
+    "sectionLabel": "SELECTED WORK",
+    "projects": [
+      {
+        "id": "gac",
+        "title": "GAC Festival Interlagos",
+        "category": "Event Production"
+      },
+      {
+        "id": "microsoft",
+        "title": "Microsoft & Fast Lane",
+        "category": "Branded Content"
+      },
+      {
+        "id": "wine",
+        "title": "The Wine Project NYC",
+        "category": "International Production"
+      },
+      {
+        "id": "michelin",
+        "title": "Michelin Connected Fleet",
+        "category": "Branded Documentary"
+      },
+      {
+        "id": "creative",
+        "title": "Creative Mornings SP",
+        "category": "Branded Storytelling"
+      },
+      {
+        "id": "agente_imovel",
+        "title": "Agente Imóvel",
+        "category": "Branded Content"
+      },
+      {
+        "id": "fenatran",
+        "title": "Michelin — Fenatran 2024",
+        "category": "Event Production"
+      },
+      {
+        "id": "reel",
+        "title": "Demo Reel EVF 2023",
+        "category": "Portfolio"
+      }
+    ]
+  },
+  "clients": {
+    "sectionLabel": "SELECTED CLIENTS",
+    "names": ["Michelin", "Microsoft"]
+  },
+  "contact": {
+    "sectionLabel": "GET IN TOUCH",
+    "headline": "Let's make <em>something</em> together.",
+    "form": {
+      "name": "NAME",
+      "email": "EMAIL",
+      "message": "MESSAGE",
+      "send": "SEND MESSAGE",
+      "sending": "SENDING...",
+      "success": "Message received. We'll be in touch.",
+      "error": "An unexpected error occurred."
+    },
+    "info": {
+      "emailLabel": "EMAIL",
+      "emailValue": "contato@erickdevasconcelos.com",
+      "phoneLabel": "PHONE / WHATSAPP",
+      "phoneValue": "+55 11 99861-0113",
+      "locationLabel": "BASED IN",
+      "locationValue": "São Paulo, Brazil",
+      "followLabel": "FOLLOW",
+      "followLinks": ["INSTAGRAM", "LINKEDIN"]
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Erick De Vasconcelos Studios — São Paulo, Brazil"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "code": "404"
+  },
+  "meta": {
+    "title": "Erick De Vasconcelos Studios | Boutique Audiovisual Production Company",
+    "description": "Boutique audiovisual production company based in São Paulo, Brazil. Producing branded and institutional films, live event content and international productions across Brazil.",
+    "ogTitle": "Erick De Vasconcelos Studios | Boutique Audiovisual Production Company",
+    "ogDescription": "Boutique audiovisual production company based in São Paulo, Brazil. Producing branded and institutional films, live event content and international productions across Brazil."
+  }
+}
