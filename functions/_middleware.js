@@ -1,36 +1,24 @@
 /**
  * Cloudflare Pages Functions Middleware for Geo-based Language Routing
  *
- * This file should be placed at /functions/_middleware.js in your Pages project.
- * It will automatically run on every request before your Pages content.
- *
- * Routes visitors based on Cloudflare's geoIP data:
- * - Brazil (BR) -> Portuguese (pt-BR)
- * - All other countries -> English (en)
+ * Brazil (BR) visitors are sent to Portuguese; all others to English.
+ * Localized paths serve the SPA entry point so React can read the URL prefix
+ * and load the matching translation bundle.
  */
-
 export async function onRequest(context) {
-  const { request, next, env } = context;
+  const { request, next } = context;
   const url = new URL(request.url);
-
-  // Get country from Cloudflare's cf object (automatically populated)
   const country = request.cf?.country || 'XX';
-  const isBrazil = country === 'BR';
-
-  // Determine target language
-  const targetLang = isBrazil ? 'pt-BR' : 'en';
-
-  // Check if URL already has a language prefix
+  const targetLang = country === 'BR' ? 'pt-BR' : 'en';
   const currentPath = url.pathname;
   const hasLangPrefix = /^\/(pt-BR|en)(\/|$)/.test(currentPath);
 
-  // If no language prefix, redirect to appropriate language version
   if (!hasLangPrefix) {
     const newPath = `/${targetLang}${currentPath === '/' ? '' : currentPath}`;
-    const redirectUrl = `${url.origin}${newPath}${url.search}${url.hash}`;
-    return Response.redirect(redirectUrl, 302);
+    return Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
   }
 
-  // If already has language prefix, continue to the page
-  return next();
+  // Keep the visitor's URL intact while serving the Vite SPA shell.
+  url.pathname = '/';
+  return next(new Request(url.toString(), request));
 }
