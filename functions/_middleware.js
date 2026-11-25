@@ -1,19 +1,22 @@
 /**
- * Cloudflare Pages Functions Middleware for Geo-based Language Routing.
- * Brazil (BR) is routed to Portuguese; other countries are routed to English.
+ * Cloudflare Pages Middleware for country-based language routing.
+ * Portuguese is served in Brazil, Portugal, Angola, Mozambique, and Timor-Leste.
+ * All other countries and territories are served in English.
  */
+const PORTUGUESE_COUNTRIES = new Set(['BR', 'PT', 'AO', 'MZ', 'TL']);
+
 export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
   const currentPath = url.pathname;
   const langMatch = currentPath.match(/^\/(pt-BR|en)(?=\/|$)/);
-  const hasLangPrefix = Boolean(langMatch);
+  const language = langMatch?.[1];
+  const hasLangPrefix = Boolean(language);
   const pathWithoutLang = hasLangPrefix
     ? currentPath.replace(/^\/(pt-BR|en)(?=\/|$)/, '') || '/'
     : currentPath;
 
-  // Let assets pass through untouched. Otherwise the locale redirect would
-  // turn JS/CSS requests into HTML responses and prevent React from starting.
+  // Serve assets directly so localized paths do not turn them into HTML.
   const isStaticAsset =
     pathWithoutLang === '/assets' ||
     pathWithoutLang.startsWith('/assets/') ||
@@ -31,12 +34,12 @@ export async function onRequest(context) {
 
   if (!hasLangPrefix) {
     const country = request.cf?.country || 'XX';
-    const targetLang = country === 'BR' ? 'pt-BR' : 'en';
+    const targetLang = PORTUGUESE_COUNTRIES.has(country) ? 'pt-BR' : 'en';
     const newPath = `/${targetLang}${currentPath === '/' ? '/' : currentPath}`;
     return Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
   }
 
-  // Keep the localized URL visible while serving the Vite SPA entry point.
-  url.pathname = '/';
+  // Serve the chosen language page while preserving its public locale URL.
+  url.pathname = language === 'pt-BR' ? '/pt-BR.html' : '/en.html';
   return next(new Request(url.toString(), request));
 }
