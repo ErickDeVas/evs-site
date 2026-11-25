@@ -40,6 +40,9 @@ export async function onRequest(context) {
   }
 
   // Serve the chosen language page while preserving its public locale URL.
-  url.pathname = language === 'pt-BR' ? '/pt-BR.html' : '/en.html';
-  return next(new Request(url.toString(), request));
+  url.pathname = language === 'pt-BR' ? '/pt-BR.txt' : '/en.txt';
+  const page = await next(new Request(url.toString(), request));
+  const headers = new Headers(page.headers);
+  headers.set('content-type', 'text/html; charset=utf-8');
+  return new Response(page.body, { status: page.status, statusText: page.statusText, headers });
 }
