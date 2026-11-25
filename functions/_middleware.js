@@ -39,10 +39,8 @@ export async function onRequest(context) {
     return Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
   }
 
-  // Serve the chosen language page while preserving its public locale URL.
-  url.pathname = language === 'pt-BR' ? '/pt-BR.txt' : '/en.txt';
-  const page = await next(new Request(url.toString(), request));
-  const headers = new Headers(page.headers);
-  headers.set('content-type', 'text/html; charset=utf-8');
-  return new Response(page.body, { status: page.status, statusText: page.statusText, headers });
+  // Keep the localized URL visible while serving the stable Pages shell.
+  // The shell loads the matching HTML document from its static text asset.
+  url.pathname = '/';
+  return next(new Request(url.toString(), request));
 }

@@ -1,36 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>Erick De Vasconcelos Studios | Boutique Audiovisual Production Company</title>
-  <meta name="description" content="Boutique audiovisual production company based in São Paulo, Brazil. Producing branded and institutional films, live event content and international productions across Brazil." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#111111" />
-  <link rel="canonical" href="https://erickdevasconcelos.com/" />
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Erick De Vasconcelos Studios | Boutique Audiovisual Production Company">
-  <meta property="og:description" content="Boutique audiovisual production company based in São Paulo, Brazil. Producing branded and institutional films, live event content and international productions across Brazil.">
-  <meta property="og:url" content="https://erickdevasconcelos.com/">
-  <meta property="og:image" content="https://erickdevasconcelos.com/og-image.jpg">
-  <meta property="og:site_name" content="Erick De Vasconcelos Studios">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/jpeg">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":["Organization","ProfessionalService"],"name":"Erick De Vasconcelos Studios","url":"https://erickdevasconcelos.com","logo":"https://erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png","image":"https://erickdevasconcelos.com/assets/still_subway_16cc3e7e.png","description":"Boutique audiovisual production company based in São Paulo, Brazil. Producing branded and institutional films, live event content and international productions across Brazil.","founder":{"@type":"Person","name":"Erick De Vasconcelos"},"address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressCountry":"BR"},"areaServed":[{"@type":"Country","name":"Brazil"},{"@type":"Place","name":"Worldwide"}],"serviceType":["Branded Films","Institutional Films","Live Event Content","International Production Services"],"sameAs":["https://www.linkedin.com/in/erickdevas/","https://www.instagram.com/erickdevasconcelos/","https://www.youtube.com/@ErickdeVasconcelosStudios"]}
-  </script>
-  <link rel="preload" href="/assets/sohne-extraleicht_cb212449.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/sohne-leicht_e435b027.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/sohne-buch_88c67b04.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/sohne-kraftig_ace045fe.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/sohne-halbfett_01f2d853.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/sohne-fett_ba73900e.woff2" as="font" type="font/woff2" crossorigin>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Erick De Vasconcelos Studios</title>
 </head>
-<body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+<body>
+  <p style="font:16px system-ui,sans-serif;padding:2rem;color:#ececea;background:#0a0b0c">Loading EVS…</p>
+  <script>
+    (() => {
+      const language = /^\/pt-BR(?:\/|$)/.test(location.pathname) ? 'pt-BR' : 'en';
+      fetch(`/${language}.txt`, { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) throw new Error('Page unavailable');
+          return response.text();
+        })
+        .then(html => {
+          document.open();
+          document.write(html);
+          document.close();
+        })
+        .catch(() => {
+          document.body.innerHTML = '<p style="font:16px system-ui,sans-serif;padding:2rem">The page could not be loaded. Please refresh.</p>';
+        });
+    })();
+  </script>
+</body>
 </html>
