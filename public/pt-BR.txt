@@ -227,11 +227,14 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   .h2.wide{font-variation-settings:"wdth" 108}
   .play{cursor:pointer}
   .cursor,.peek{display:none}
-  .row{grid-template-columns:112px minmax(0,1fr);gap:16px;padding:16px 0}
-  .row .thumb{display:block;width:112px;aspect-ratio:16/10;object-fit:cover;grid-row:span 2}
-  .row .t{font-size:21px;align-self:end}
-  .row .c{font-size:14px;align-self:start}
+  .row{grid-template-columns:minmax(0,1fr);gap:8px;padding:18px 0}
+  .row .thumb{display:none}
+  .row .t{font-size:21px;align-self:auto}
+  .row .c{font-size:14px;align-self:auto}
   .row .go{display:none}
+  .row.preview-open{gap:12px}
+  .row.preview-open .thumb{display:block;width:100%;aspect-ratio:2.39/1;object-fit:cover;grid-row:auto}
+  .row.preview-open .go{display:flex;justify-self:start;color:var(--paper)}
   .row:hover .t{transform:none}
   .svc{grid-template-columns:1fr}
   .intl .head{display:block}
@@ -314,7 +317,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
 
 <!-- ================= TRABALHOS ================= -->
 <section class="work" id="trabalhos">
-  <div class="head"><h2 class="h2 wide">Portfólio em Destaque</h2><p class="work-hint"><span class="hint-desktop">Passe o cursor para ver uma prévia · clique para assistir</span><span class="hint-mobile">Toque em um projeto para assistir</span></p></div>
+  <div class="head"><h2 class="h2 wide">Portfólio em Destaque</h2><p class="work-hint"><span class="hint-desktop">Passe o cursor para ver uma prévia · clique para assistir</span><span class="hint-mobile">Toque para ver uma prévia · toque novamente para assistir</span></p></div>
   <ul class="rows" id="rows"></ul>
   <div class="peek" id="peek" aria-hidden="true"><img id="peekimg" alt=""></div>
 </section>
@@ -423,7 +426,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   /* ---------- lista de trabalhos ---------- */
   const rows = document.getElementById('rows');
   rows.innerHTML = projects.map(p => `
-    <li><button class="row" data-vimeo="${p.vimeo}" data-title="${p.title}" data-thumb="${A+p.thumb}">
+    <li><button class="row" aria-expanded="false" data-vimeo="${p.vimeo}" data-title="${p.title}" data-thumb="${A+p.thumb}">
       <img class="thumb" src="${A+p.thumb}" alt="" loading="lazy">
       <span class="t">${p.title}</span><span class="c">${p.cat}</span><span class="go">Assistir</span>
     </button></li>`).join('');
@@ -457,7 +460,14 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-vimeo]');
-    if (b && b.tagName !== 'IFRAME') openVideo(b.dataset.vimeo, b.dataset.title);
+    if (!b || b.tagName === 'IFRAME') return;
+    const isTouchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (isTouchDevice && b.classList.contains('row') && !b.classList.contains('preview-open')) {
+      b.classList.add('preview-open');
+      b.setAttribute('aria-expanded', 'true');
+      return;
+    }
+    openVideo(b.dataset.vimeo, b.dataset.title);
   });
 
   /* ---------- hero: o quadro abre com o scroll ---------- */
