@@ -36,9 +36,13 @@ export async function onRequest(context) {
     const country = request.cf?.country || 'XX';
     const targetLang = PORTUGUESE_COUNTRIES.has(country) ? 'pt-BR' : 'en';
     const newPath = `/${targetLang}${currentPath === '/' ? '/' : currentPath}`;
-    const redirect = Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
-    redirect.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
-    return redirect;
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: `${url.origin}${newPath}${url.search}`,
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
+      },
+    });
   }
 
   // Keep the localized URL visible while serving the stable Pages shell.
