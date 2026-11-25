@@ -209,6 +209,11 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
    MOBILE
    ============================================================ */
 @media (max-width:900px){
+  /* Mobile hero: use the full screen for the film frame instead of a narrow 2.39:1 strip. */
+  .hero{height:150svh}
+  .frame{transform:scale(var(--zoom,1.06))}
+  .bar{display:none}
+  .hud{top:calc(76px + env(safe-area-inset-top))}
   .nav ul,.lang{display:none}
   .work-hint .hint-desktop{display:none}
   .work-hint .hint-mobile{display:inline}
