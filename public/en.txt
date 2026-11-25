@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Erick De Vasconcelos Studios | Boutique Film Production</title>
 <meta name="description" content="Film production in São Paulo for brands and international crews shooting in Brazil. Local logistics, crew, and location scouting.">
-<link rel="alternate" hreflang="pt" href="https://erickdevasconcelos.com/pt-BR/">
-<link rel="alternate" hreflang="en" href="https://erickdevasconcelos.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://erickdevasconcelos.com/en/">
+<link rel="canonical" href="https://www.erickdevasconcelos.com/en/">
+<link rel="alternate" hreflang="pt" href="https://www.erickdevasconcelos.com/pt-BR/">
+<link rel="alternate" hreflang="en" href="https://www.erickdevasconcelos.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.erickdevasconcelos.com/en/">
 <link rel="preconnect" href="https://player.vimeo.com">
 <style>
 @font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-extraleicht_cb212449.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
