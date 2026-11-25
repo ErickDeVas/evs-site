@@ -295,8 +295,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
     <button class="play" id="play" data-vimeo="839737105" data-title="Demo Reel EVS" aria-label="Watch the EVS Demo Reel"></button>
     <div class="slate">
       <div>
-        <p class="kicker">São Paulo, Brazil, since 2007</p>
-        <h1 class="wide">Films for <span class="brand-word">brands.</span></h1>
+        <h1 class="wide">Cinematic <span class="brand-word">production</span> for brands and <span class="brand-word">international</span> teams.</h1>
         <p class="sub">Your local production partner in Brazil.</p>
       </div>
       <a class="btn" href="#trabalhos">Featured portfolio</a>
