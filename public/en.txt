@@ -461,8 +461,8 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-vimeo]');
     if (!b || b.tagName === 'IFRAME') return;
-    const isTouchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
-    if (isTouchDevice && b.classList.contains('row') && !b.classList.contains('preview-open')) {
+    const isMobileLayout = matchMedia('(max-width: 900px)').matches;
+    if (isMobileLayout && b.classList.contains('row') && !b.classList.contains('preview-open')) {
       b.classList.add('preview-open');
       b.setAttribute('aria-expanded', 'true');
       return;
