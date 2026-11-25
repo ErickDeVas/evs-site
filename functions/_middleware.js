@@ -36,11 +36,16 @@ export async function onRequest(context) {
     const country = request.cf?.country || 'XX';
     const targetLang = PORTUGUESE_COUNTRIES.has(country) ? 'pt-BR' : 'en';
     const newPath = `/${targetLang}${currentPath === '/' ? '/' : currentPath}`;
-    return Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
+    const redirect = Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
+    redirect.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+    return redirect;
   }
 
   // Keep the localized URL visible while serving the stable Pages shell.
   // The shell loads the matching HTML document from its static text asset.
   url.pathname = '/';
-  return next(new Request(url.toString(), request));
+  const page = await next(new Request(url.toString(), request));
+  const headers = new Headers(page.headers);
+  headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+  return new Response(page.body, { status: page.status, statusText: page.statusText, headers });
 }
