@@ -45,10 +45,9 @@ export async function onRequest(context) {
     });
   }
 
-  // Serve the full localized HTML document at the language URL. This lets search
-  // engines and AI crawlers read the page without relying on client-side document.write.
-  url.pathname = `/${language}/index.html`;
-  const page = await next(new Request(url.toString(), request));
+  // Let Pages resolve the localized directory to its index.html. Rewriting to
+  // /<language>/index.html makes Pages normalize back to /<language>/ and loops.
+  const page = await next();
   const headers = new Headers(page.headers);
   headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
   return new Response(page.body, { status: page.status, statusText: page.statusText, headers });
