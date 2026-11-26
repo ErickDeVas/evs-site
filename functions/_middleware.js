@@ -45,9 +45,9 @@ export async function onRequest(context) {
     });
   }
 
-  // Keep the localized URL visible while serving the stable Pages shell.
-  // The shell loads the matching HTML document from its static text asset.
-  url.pathname = '/';
+  // Serve the full localized HTML document at the language URL. This lets search
+  // engines and AI crawlers read the page without relying on client-side document.write.
+  url.pathname = `/${language}/index.html`;
   const page = await next(new Request(url.toString(), request));
   const headers = new Headers(page.headers);
   headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');

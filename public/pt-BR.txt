@@ -6,19 +6,30 @@
 <title>Erick De Vasconcelos Studios | Produtora Audiovisual Boutique</title>
 <meta name="description" content="Produção audiovisual em São Paulo para marcas e equipes internacionais que filmam no Brasil. Logística, profissionais locais e location scouting.">
 <link rel="canonical" href="https://www.erickdevasconcelos.com/pt-BR/">
-<link rel="alternate" hreflang="pt" href="https://www.erickdevasconcelos.com/pt-BR/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.erickdevasconcelos.com/pt-BR/">
 <link rel="alternate" hreflang="en" href="https://www.erickdevasconcelos.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://www.erickdevasconcelos.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Erick De Vasconcelos Studios">
+<meta property="og:url" content="https://www.erickdevasconcelos.com/pt-BR/">
+<meta property="og:title" content="Erick De Vasconcelos Studios | Produção Audiovisual em São Paulo">
+<meta property="og:description" content="Produção audiovisual em São Paulo para marcas e equipes internacionais que filmam no Brasil. Logística, profissionais locais e location scouting.">
+<meta property="og:image" content="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Erick De Vasconcelos Studios | Produção Audiovisual em São Paulo">
+<meta name="twitter:description" content="Produção audiovisual em São Paulo para marcas e equipes internacionais que filmam no Brasil. Logística, profissionais locais e location scouting.">
+<meta name="twitter:image" content="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png">
 <link rel="preconnect" href="https://player.vimeo.com">
 <style>
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-extraleicht_cb212449.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-leicht_e435b027.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-buch_88c67b04.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-buch-italic_bf6b7ca9.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-kraftig_ace045fe.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-halbfett_01f2d853.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-fett_ba73900e.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:"Sohne";src:url("https://erickdevasconcelos.com/assets/sohne-dreiviertelfett_b525eba4.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-extraleicht_cb212449.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-leicht_e435b027.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-buch_88c67b04.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-buch-italic_bf6b7ca9.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-kraftig_ace045fe.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-halbfett_01f2d853.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-fett_ba73900e.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-dreiviertelfett_b525eba4.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
 /* ============================================================
    EVS — tokens tirados do próprio logo
    ============================================================ */
@@ -263,13 +274,40 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   .roll{animation:none;flex-wrap:wrap;width:auto;justify-content:center;gap:0 48px}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Erick De Vasconcelos Studios",
+  "url": "https://www.erickdevasconcelos.com/",
+  "logo": "https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png",
+  "image": "https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png",
+  "description": "Produção audiovisual em São Paulo para marcas e equipes internacionais que filmam no Brasil.",
+  "founder": { "@type": "Person", "name": "Erick De Vasconcelos" },
+  "areaServed": [
+    { "@type": "Country", "name": "Brazil" },
+    { "@type": "Place", "name": "Latin America" }
+  ],
+  "knowsAbout": [
+    "Film production",
+    "International production support in Brazil",
+    "Production logistics",
+    "Local film crew coordination",
+    "Location scouting"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/erickdevasconcelos",
+    "https://www.linkedin.com/in/erickdevas/"
+  ]
+}
+</script>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true"><i><span class="cursor-label">Ver reel</span></i></div>
 
 <nav class="nav" aria-label="Principal">
-  <a class="logo" href="#topo" aria-label="EVS, início"><img src="https://erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS"></a>
+  <a class="logo" href="#topo" aria-label="EVS, início"><img src="https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS"></a>
   <ul>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#trabalhos">Portfólio</a></li>
@@ -285,7 +323,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
 <header class="hero" id="topo">
   <div class="stage" id="stage">
     <div class="frame" id="frame" aria-hidden="true">
-      <img class="poster" src="https://erickdevasconcelos.com/assets/copia_de_c_c7de6531.png" alt="">
+      <img class="poster" src="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png" alt="">
       <!-- Reel em loop, sem som (Vimeo background). Aparece só quando começa a tocar. -->
       <iframe id="bgreel" title="Demo Reel EVS em loop" allow="autoplay; fullscreen"
         src="https://player.vimeo.com/video/839737105?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1"></iframe>
@@ -327,14 +365,14 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
   <div class="label"><h2 class="h2 wide" id="cl">Clientes selecionados</h2></div>
   <div class="viewport">
   <ul class="roll" id="roll">
-    <li><img src="https://erickdevasconcelos.com/assets/michelin_v4_white_87d45daa.png" alt="Michelin" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/microsoft_v2_white_05cc11e8.png" alt="Microsoft" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/banco_brasil_v3_white_09c3d6ae.png" alt="Banco do Brasil" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/airbnb_v3_white_d07e3ef8.png" alt="Airbnb" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/natura_v3_white_c7feaa09.png" alt="Natura" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/logo_gac_white_e53c321d.png" alt="GAC" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/dengo_v3_white_3e55f7e8.png" alt="Dengo" loading="lazy"></li>
-    <li><img src="https://erickdevasconcelos.com/assets/general_mills_v4_white_86013c30.png" alt="General Mills" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/michelin_v4_white_87d45daa.png" alt="Michelin" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/microsoft_v2_white_05cc11e8.png" alt="Microsoft" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/banco_brasil_v3_white_09c3d6ae.png" alt="Banco do Brasil" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/airbnb_v3_white_d07e3ef8.png" alt="Airbnb" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/natura_v3_white_c7feaa09.png" alt="Natura" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/logo_gac_white_e53c321d.png" alt="GAC" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/dengo_v3_white_3e55f7e8.png" alt="Dengo" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/general_mills_v4_white_86013c30.png" alt="General Mills" loading="lazy"></li>
   </ul>
   </div>
 </section>
@@ -355,7 +393,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
 <!-- ================= PERFIL ================= -->
 <section class="about" id="sobre" aria-label="Sobre Erick De Vasconcelos e a EVS">
   <div class="founder">
-    <img src="https://erickdevasconcelos.com/assets/Sem-Titulo-1_02_43765c7d.png" alt="Erick De Vasconcelos" loading="lazy">
+    <img src="https://www.erickdevasconcelos.com/assets/Sem-Titulo-1_02_43765c7d.png" alt="Erick De Vasconcelos" loading="lazy">
     <div>
       <p class="role">Produtor e diretor criativo</p>
       <h2 class="founder-name">Erick De Vasconcelos</h2>
@@ -392,7 +430,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
 
 <footer>
   <div>
-    <img src="https://erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS">
+    <img src="https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS">
     © 2026 Erick De Vasconcelos Studios, São Paulo, Brasil
   </div>
   <nav aria-label="Redes">
@@ -409,7 +447,7 @@ dialog::backdrop{background:rgba(0,0,0,.92)}
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
 (() => {
-  const A = 'https://erickdevasconcelos.com/assets/';
+  const A = 'https://www.erickdevasconcelos.com/assets/';
   /* mesmos projetos e vídeos do site atual */
   const projects = [
     {title:'GAC Festival Interlagos', cat:'Eventos', vimeo:'1182709952', thumb:'thumb_gac_8d53accf.jpg'},

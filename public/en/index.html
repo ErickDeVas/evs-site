@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erick De Vasconcelos Studios | Boutique Film Production</title>
+<meta name="description" content="Film production in São Paulo for brands and international crews shooting in Brazil. Local logistics, crew, and location scouting.">
+<link rel="canonical" href="https://www.erickdevasconcelos.com/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.erickdevasconcelos.com/pt-BR/">
+<link rel="alternate" hreflang="en" href="https://www.erickdevasconcelos.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.erickdevasconcelos.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Erick De Vasconcelos Studios">
+<meta property="og:url" content="https://www.erickdevasconcelos.com/en/">
+<meta property="og:title" content="Erick De Vasconcelos Studios | Film Production in Brazil">
+<meta property="og:description" content="Film production in São Paulo for brands and international crews shooting in Brazil. Local logistics, crew, and location scouting.">
+<meta property="og:image" content="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Erick De Vasconcelos Studios | Film Production in Brazil">
+<meta name="twitter:description" content="Film production in São Paulo for brands and international crews shooting in Brazil. Local logistics, crew, and location scouting.">
+<meta name="twitter:image" content="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png">
+<link rel="preconnect" href="https://player.vimeo.com">
+<style>
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-extraleicht_cb212449.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-leicht_e435b027.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-buch_88c67b04.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-buch-italic_bf6b7ca9.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-kraftig_ace045fe.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-halbfett_01f2d853.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-fett_ba73900e.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Sohne";src:url("https://www.erickdevasconcelos.com/assets/sohne-dreiviertelfett_b525eba4.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+/* ============================================================
+   EVS — tokens tirados do próprio logo
+   ============================================================ */
+:root{
+  --black:#000;            /* letterbox: o preto da sala */
+  --ink:#0a0b0c;           /* fundo atual do site */
+  --g1:#a1a1a1;            /* círculo claro */
+  --g2:#7c7c7c;            /* círculo médio + "evs" */
+  --g3:#4a4a4a;            /* círculo escuro */
+  --blue:#004479;          /* o círculo azul — único acento */
+  --blue-lit:#3d86c6;      /* azul para texto/linhas finas sobre preto (contraste) */
+  --paper:#ececea;         /* texto principal / fundo da ordem do dia */
+  --line:rgba(236,236,234,.16);
+  --font:"Sohne",system-ui,sans-serif;
+  --pad:clamp(20px,4.2vw,64px);
+  --bandH:41.84vw;         /* 100vw / 2.39 — o quadro scope */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink);color:var(--paper);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
+.wide{font-family:var(--font)}
+
+/* grão */
+.grain{position:fixed;inset:-50%;pointer-events:none;z-index:80;opacity:.06;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain .6s steps(4) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px var(--pad);background:linear-gradient(rgba(0,0,0,.7),transparent);transition:background .3s}
+.nav.solid{background:rgba(0,0,0,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.nav .logo{order:3}.nav ul{order:1}.nav .right{order:2}
+.nav .logo img{height:35.7px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:14px}
+.nav ul a,.lang a{text-decoration:none;color:var(--g1)}
+.nav ul a:hover,.lang a:hover,.lang a[aria-current]{color:var(--paper)}
+.nav .right{display:flex;align-items:center;gap:28px}
+.lang{font-size:13px;color:var(--g3)}
+.cta-nav{font-size:14px;text-decoration:none;background:var(--blue);color:#fff;padding:9px 18px;border-radius:999px}
+.cta-nav:hover{background:#00569a}
+
+/* ============================================================
+   HERO — quadro 2.39:1 que abre até tela cheia
+   ============================================================ */
+.hero{height:250vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--black)}
+.frame{position:absolute;inset:0;transform:scale(var(--zoom,1.12));will-change:transform}
+.frame .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.2) brightness(.8)}
+.frame iframe{position:absolute;top:50%;left:50%;width:max(100vw,177.78vh);height:max(56.25vw,100vh);transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.frame.playing iframe{opacity:1}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,0) 48%)}
+.bar{position:absolute;left:0;right:0;z-index:3;background:var(--black);height:max(0px,calc((100svh - var(--bandH)) / 2 * (1 - var(--p,0))))}
+.bar.top{top:0}.bar.bot{bottom:0}
+.hud{position:absolute;z-index:4;left:var(--pad);right:var(--pad);top:max(76px,calc((100svh - var(--bandH)) / 2 * (1 - var(--p,0)) + 14px));display:flex;justify-content:space-between;font-size:13px;color:var(--paper);opacity:.85;font-variant-numeric:tabular-nums;pointer-events:none}
+.rec::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue-lit);margin-right:9px;vertical-align:1px;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.slate{position:absolute;z-index:4;left:var(--pad);right:var(--pad);bottom:clamp(28px,6vh,64px);display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px;pointer-events:none}
+.kicker{font-size:14px;color:var(--g1);margin-bottom:14px}
+.brand-word{color:rgba(161,161,161,.86)}
+.slate h1{font-weight:700;font-size:clamp(38px,5.4vw,88px);line-height:.95;letter-spacing:-.025em;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.kicker{text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.slate .sub{font-size:clamp(17px,1.5vw,22px);color:var(--paper);margin-top:16px;max-width:34ch}
+.slate a{pointer-events:auto}
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-size:15px;font-weight:500;text-decoration:none;color:var(--paper);border:1px solid rgba(236,236,234,.45);padding:14px 22px;border-radius:999px;background:rgba(0,0,0,.25);backdrop-filter:blur(6px);cursor:pointer}
+.btn:hover{background:var(--paper);color:#000}
+.btn.solid{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.solid:hover{background:#00569a}
+.play{position:absolute;z-index:3;inset:0;border:0;background:transparent;cursor:none}
+
+/* cursor: esfera azul sobre o quadro do reel */
+.cursor{position:fixed;z-index:70;left:0;top:0;width:68.2px;height:68.2px;margin:-34.1px 0 0 -34.1px;pointer-events:none}
+.cursor i{position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:var(--blue);box-shadow:0 0 0 1px rgba(61,134,198,.35),0 5px 20px rgba(0,0,0,.25);color:#fff;font-size:10px;font-weight:600;font-style:normal;opacity:1;transform:scale(1);transition:transform .25s cubic-bezier(.2,.9,.2,1),background .2s}
+.cursor-label{opacity:0;transform:scale(.92);transition:opacity .18s,transform .18s;white-space:nowrap}
+.cursor.on .cursor-label{opacity:1;transform:scale(1)}
+.cursor.interactive i{transform:scale(1.06)}
+@media (hover:hover) and (pointer:fine){html,html *{cursor:none!important}}
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+section{padding:clamp(88px,11vw,170px) var(--pad)}
+.h2{font-weight:700;font-size:clamp(34px,4.6vw,72px);line-height:1;letter-spacing:-.02em}
+.muted{color:var(--g1)}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.head p{color:var(--g2);font-size:15px}
+.work-hint .hint-mobile{display:none}
+
+/* trabalhos: índice em linhas, como créditos */
+.work{background:var(--ink)}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.row{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 260px 120px;gap:24px;align-items:center;padding:24px 0;border:0;border-bottom:1px solid var(--line);background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.row .thumb{display:none}
+.row .t{font-weight:600;font-size:clamp(24px,3vw,46px);line-height:1.05;letter-spacing:-.015em;transition:transform .4s cubic-bezier(.2,.9,.2,1),color .2s}
+.row .c{color:var(--g1);font-size:15px}
+.row .go{justify-self:end;font-size:14px;color:var(--g2);display:flex;align-items:center;gap:8px}
+.row .go::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--g3);transition:background .2s}
+.row:hover .t,.row:focus-visible .t{transform:translateX(16px);color:#fff}
+.row:hover .go::before,.row:focus-visible .go::before{background:var(--blue-lit)}
+.row:hover .go{color:var(--paper)}
+.peek{position:fixed;z-index:50;left:0;top:0;width:min(440px,32vw);aspect-ratio:2.39/1;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .2s,transform .35s cubic-bezier(.2,.9,.2,1);box-shadow:0 30px 90px rgba(0,0,0,.7);overflow:hidden;background:#111}
+.peek img{width:100%;height:100%;object-fit:cover}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+/* serviços */
+.services{background:var(--black);border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
+.svc article{border-top:1px solid var(--line);padding-top:24px}
+.svc .dot{width:22px;height:22px;border-radius:50%;margin-bottom:28px}
+.svc h3{font-weight:600;font-size:clamp(22px,2vw,28px);line-height:1.15;margin-bottom:12px;letter-spacing:-.01em}
+.svc p{color:var(--g1);max-width:34ch}
+
+/* internacional */
+.intl{background:var(--black)}
+.intl .head{align-items:end;margin-bottom:clamp(28px,4vw,52px)}
+.intl .head .h2{max-width:13ch}
+.intl .head p{max-width:42ch;color:var(--g1);font-size:clamp(17px,1.5vw,21px)}
+.intl-details{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:clamp(36px,5vw,64px)}
+.intl-details article{border-top:1px solid var(--line);padding-top:18px}
+.intl-details h3{font-size:clamp(18px,1.55vw,22px);font-weight:600;line-height:1.15;margin-bottom:10px}
+.intl-details p{color:var(--g1);max-width:38ch;font-size:15px}
+
+/* sobre */
+.about{background:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:clamp(56px,7vw,100px)}
+.facts div{padding:22px 0 0;font-size:clamp(20px,2.2vw,32px);font-weight:600;letter-spacing:-.01em}
+.facts span{display:block;font-size:14px;font-weight:400;color:var(--g2);margin-bottom:4px;letter-spacing:0}
+.founder{display:grid;grid-template-columns:292.5px 1fr;gap:32px;align-items:end;margin-top:0;padding-top:0;border-top:0}
+.founder img{aspect-ratio:1;object-fit:cover;width:292.5px;filter:grayscale(1)}
+.founder .role{font-size:14px;color:var(--g2)}
+.founder-name{font-weight:600;font-size:clamp(38px,4.5vw,60px);line-height:1;letter-spacing:-.025em;margin:4px 0 18px}
+.founder p{color:var(--g1);max-width:60ch;font-size:19.2px;line-height:1.4}
+.about .founder{margin-top:0;padding-top:0;border-top:0}
+
+/* clientes: créditos finais */
+.credits{background:var(--black);display:block}
+.credits .label{margin-bottom:clamp(20px,3vw,36px)}
+.credits .h2{font-size:clamp(28px,3.2vw,48px);line-height:1.05}
+.viewport{height:auto;min-height:200px;display:flex;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.roll{list-style:none;display:flex;width:max-content;align-items:center;gap:clamp(40px,6vw,88px);animation:roll 38s linear infinite}
+.roll li{flex:0 0 auto;padding:30px 0}
+.roll img{height:clamp(56px,5.7vw,74px);width:auto;max-width:min(300px,65vw);object-fit:contain;opacity:.92}
+@keyframes roll{to{transform:translateX(-50%)}}
+
+/* contato: ordem do dia */
+.callsheet{background:var(--paper);color:#000}
+.callsheet .head{margin-bottom:48px}
+.callsheet .h2{font-size:clamp(40px,6.3vw,108px);letter-spacing:-.03em;max-width:11ch}
+.cs{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto minmax(170px,1fr) auto;border-top:3px solid #000}
+form{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:subgrid;grid-row:1/-1;border-right:1px solid #000}
+.cell{border-bottom:1px solid #000;padding:14px 18px 10px;display:flex;flex-direction:column;gap:2px}
+.cell:first-child{border-right:1px solid #000}
+.cell.full{grid-column:1/-1}
+label{font-size:13px;color:#555}
+input,textarea{font:inherit;font-size:19px;background:transparent;border:0;color:#000;padding:4px 0;outline:none;width:100%;border-radius:0}
+textarea{resize:vertical;min-height:150px}
+.cell:focus-within{background:#fff;box-shadow:inset 3px 0 0 var(--blue)}
+.submit{grid-column:1/-1;padding:24px 18px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.submit button{font:inherit;font-weight:600;font-size:16px;background:var(--blue);color:#fff;border:0;padding:17px 34px;border-radius:999px;cursor:pointer}
+.submit button:hover{background:#00569a}
+.submit button:disabled{opacity:.5;cursor:default}
+.status{font-size:15px}
+.info{list-style:none;display:grid;grid-template-rows:subgrid;grid-row:1/-1}
+.info li{border-bottom:1px solid #000;padding:14px 18px;min-width:0}
+.info span{display:block;font-size:13px;color:#555}
+.info a,.info b{font-size:clamp(15px,1.35vw,18px);font-weight:500;text-decoration:none}
+.info a:hover{text-decoration:underline}
+
+footer{background:var(--black);padding:56px var(--pad) calc(36px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;font-size:14px;color:var(--g2)}
+footer img{height:40px;width:auto;margin-bottom:14px}
+footer nav{display:flex;gap:24px}
+footer nav a{display:inline-flex;align-items:center;gap:8px;color:var(--paper);text-decoration:none}
+footer nav svg{width:16px;height:16px;color:var(--g2)}
+footer nav a:hover{text-decoration:underline}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;width:min(1280px,94vw);max-width:none;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.92)}
+.lb-frame{aspect-ratio:16/9;background:#000}
+.lb-frame iframe{width:100%;height:100%;border:0}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;color:var(--paper);padding:14px 0;font-size:15px}
+.lb-bar button{font:inherit;background:none;border:1px solid rgba(236,236,234,.4);color:var(--paper);border-radius:999px;padding:8px 18px;cursor:pointer}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width:900px){
+  /* Mobile hero: use the full screen for the film frame instead of a narrow 2.39:1 strip. */
+  .hero{height:150svh}
+  .frame{transform:scale(var(--zoom,1.06))}
+  .bar{display:none}
+  .hud{top:calc(76px + env(safe-area-inset-top))}
+  .nav ul{display:none}
+  .nav .right{gap:8px}
+  .lang{display:block}
+  .work-hint .hint-desktop{display:none}
+  .work-hint .hint-mobile{display:inline}
+  .nav .logo img{height:29.4px}
+  .cta-nav{padding:8px 16px}
+  .slate{grid-template-columns:1fr;gap:22px}
+  .slate h1{font-size:clamp(30px,8.6vw,60px);font-variation-settings:"wdth" 104}
+  .slate .btn{justify-self:start}
+  .h2.wide{font-variation-settings:"wdth" 108}
+  .play{cursor:pointer}
+  .cursor,.peek{display:none}
+  .row{grid-template-columns:minmax(0,1fr);gap:8px;padding:18px 0}
+  .row .thumb{display:none}
+  .row .t{font-size:21px;align-self:auto}
+  .row .c{font-size:14px;align-self:auto}
+  .row .go{display:none}
+  .row.preview-open{gap:12px}
+  .row.preview-open .thumb{display:block;width:100%;aspect-ratio:2.39/1;object-fit:cover;grid-row:auto}
+  .row.preview-open .go{display:flex;justify-self:start;color:var(--paper)}
+  .row:hover .t{transform:none}
+  .svc{grid-template-columns:1fr}
+  .intl .head{display:block}
+  .intl .head p{margin-top:18px}
+  .intl-details{grid-template-columns:1fr;gap:24px}
+  .facts{grid-template-columns:1fr}
+  .facts div{padding:16px 0;border-bottom:1px solid var(--line)}
+  .founder{grid-template-columns:1fr;border-top:0;margin-top:56px;padding-top:0}
+  .svc .dot{width:16px;height:16px;margin-bottom:18px}
+  .founder img{width:204.75px}
+  .cs{grid-template-columns:1fr;grid-template-rows:auto auto}
+  form{grid-column:1;grid-row:auto;grid-template-columns:1fr;grid-template-rows:auto auto auto;border-right:0}
+  .info{grid-column:1;grid-row:auto;grid-template-rows:none;margin-top:28px;border-top:3px solid #000}
+  .info li{padding:14px 0}
+  form{border-right:0}
+  .cell:first-child{border-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .grain,.rec::before{animation:none}
+  .hero{height:100vh}
+  .stage{--p:.85 !important}
+  .frame{transform:none}
+  .viewport{-webkit-mask-image:none;mask-image:none}
+  .roll{animation:none;flex-wrap:wrap;width:auto;justify-content:center;gap:0 48px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Erick De Vasconcelos Studios",
+  "url": "https://www.erickdevasconcelos.com/",
+  "logo": "https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png",
+  "image": "https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png",
+  "description": "Film production in São Paulo for brands and international crews filming in Brazil.",
+  "founder": { "@type": "Person", "name": "Erick De Vasconcelos" },
+  "areaServed": [
+    { "@type": "Country", "name": "Brazil" },
+    { "@type": "Place", "name": "Latin America" }
+  ],
+  "knowsAbout": [
+    "Film production",
+    "International production support in Brazil",
+    "Production logistics",
+    "Local film crew coordination",
+    "Location scouting"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/erickdevasconcelos",
+    "https://www.linkedin.com/in/erickdevas/"
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><i><span class="cursor-label">Ver reel</span></i></div>
+
+<nav class="nav" aria-label="Main">
+  <a class="logo" href="#topo" aria-label="EVS, home"><img src="https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS"></a>
+  <ul>
+    <li><a href="#servicos">Services</a></li>
+    <li><a href="#trabalhos">Portfolio</a></li>
+    <li><a href="#sobre">About</a></li>
+  </ul>
+  <div class="right">
+    <span class="lang"><a href="/pt-BR/">PT</a> / <a href="#" aria-current="page">EN</a></span>
+    <a class="cta-nav" href="#contato">Contact</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="topo">
+  <div class="stage" id="stage">
+    <div class="frame" id="frame" aria-hidden="true">
+      <img class="poster" src="https://www.erickdevasconcelos.com/assets/copia_de_c_c7de6531.png" alt="">
+      <!-- Reel em loop, sem som (Vimeo background). Aparece só quando começa a tocar. -->
+      <iframe id="bgreel" title="Demo Reel EVS em loop" allow="autoplay; fullscreen"
+        src="https://player.vimeo.com/video/839737105?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1"></iframe>
+    </div>
+    <div class="bar top"></div>
+    <div class="bar bot"></div>
+    <div class="hud" aria-hidden="true"><span class="rec">Demo Reel EVS</span></div>
+    <button class="play" id="play" data-vimeo="839737105" data-title="Demo Reel EVS" aria-label="Watch the EVS Demo Reel"></button>
+    <div class="slate">
+      <div>
+        <h1 class="wide">Cinematic <span class="brand-word">production</span><br>for brands and<br><span class="brand-word">international</span> teams.</h1>
+      </div>
+      <a class="btn" href="#trabalhos">Featured portfolio</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= SERVIÇOS ================= -->
+<section class="services" id="servicos">
+  <div class="head"><h2 class="h2 wide">Services</h2></div>
+  <div class="svc">
+    <article><div class="dot" style="background:var(--g2)"></div><h3>Branded &amp; Corporate</h3><p>Films for brands, agencies, and marketing teams, from concept through delivery.</p></article>
+    <article><div class="dot" style="background:var(--g1)"></div><h3>Live Events</h3><p>Coverage of events, launches, and brand activations.</p></article>
+    <article><div class="dot" style="background:var(--blue)"></div><h3>International Production</h3><p>Local production support for international crews filming in Brazil.</p></article>
+  </div>
+</section>
+
+<!-- ================= TRABALHOS ================= -->
+<section class="work" id="trabalhos">
+  <div class="head"><h2 class="h2 wide">Featured Portfolio</h2><p class="work-hint"><span class="hint-desktop">Hover to preview · click to watch</span><span class="hint-mobile">Tap a project for a preview · tap again to watch</span></p></div>
+  <ul class="rows" id="rows"></ul>
+  <div class="peek" id="peek" aria-hidden="true"><img id="peekimg" alt=""></div>
+</section>
+
+<!-- ================= CLIENTES ================= -->
+<section class="credits" aria-labelledby="cl">
+  <div class="label"><h2 class="h2 wide" id="cl">Selected Clients</h2></div>
+  <div class="viewport">
+  <ul class="roll" id="roll">
+    <li><img src="https://www.erickdevasconcelos.com/assets/michelin_v4_white_87d45daa.png" alt="Michelin" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/microsoft_v2_white_05cc11e8.png" alt="Microsoft" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/banco_brasil_v3_white_09c3d6ae.png" alt="Banco do Brasil" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/airbnb_v3_white_d07e3ef8.png" alt="Airbnb" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/natura_v3_white_c7feaa09.png" alt="Natura" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/logo_gac_white_e53c321d.png" alt="GAC" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/dengo_v3_white_3e55f7e8.png" alt="Dengo" loading="lazy"></li>
+    <li><img src="https://www.erickdevasconcelos.com/assets/general_mills_v4_white_86013c30.png" alt="General Mills" loading="lazy"></li>
+  </ul>
+  </div>
+</section>
+
+<!-- ================= INTERNACIONAL ================= -->
+<section class="intl" id="internacional">
+  <div class="head">
+    <h2 class="h2 wide">International Productions</h2>
+    <p>For international crews filming in Brazil, we take care of local production so you can focus on the film.</p>
+  </div>
+  <div class="intl-details">
+    <article><h3>Logistics &amp; Travel</h3><p>We arrange vans and other transportation, flights, accommodation, and equipment rentals. We also support productions in other regions of Brazil and across Latin America.</p></article>
+    <article><h3>Local Crew</h3><p>We connect productions with professionals in São Paulo and across Brazil: camera assistants, directors of photography, makeup artists, and other essential crew.</p></article>
+    <article><h3>Location Scouting</h3><p>São Paulo is our home base, and we know it inside out. We scout locations that fit the project and connect you with the people responsible for them.</p></article>
+  </div>
+</section>
+
+<!-- ================= PERFIL ================= -->
+<section class="about" id="sobre" aria-label="About Erick De Vasconcelos and EVS">
+  <div class="founder">
+    <img src="https://www.erickdevasconcelos.com/assets/Sem-Titulo-1_02_43765c7d.png" alt="Erick De Vasconcelos" loading="lazy">
+    <div>
+      <p class="role">Producer &amp; Creative Director</p>
+      <h2 class="founder-name">Erick De Vasconcelos</h2>
+      <p>Erick is a producer and creative director working across branded content, corporate communications, live events, and international production. He leads projects from brief to delivery, coordinating crews and vendors, with work for Michelin, Airbnb, General Mills, UNESCO, and Banco do Brasil.</p>
+    </div>
+  </div>
+  <div class="facts">
+    <div><span>Based in</span>São Paulo</div>
+    <div><span>Working since</span>2007</div>
+    <div><span>Working across</span>Brazil &amp; internationally</div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="callsheet" id="contato">
+  <div class="head"><h2 class="h2 wide">Let’s make something together.</h2></div>
+  <div class="cs">
+    <form id="form" novalidate>
+      <input type="hidden" name="_subject" value="New contact through the EVS website">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="cell"><label for="f-nome">Name</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+      <div class="cell"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="cell full"><label for="f-msg">Message</label><textarea id="f-msg" name="mensagem" required></textarea></div>
+      <div class="submit"><button type="submit">Send message</button><p class="status" id="status" role="status"></p></div>
+    </form>
+    <ul class="info">
+      <li><span>Email</span><a href="mailto:contato@erickdevasconcelos.com">contato@erickdevasconcelos.com</a></li>
+      <li><span>Phone / WhatsApp</span><a href="https://wa.me/5511998610113">+55 11 99861-0113</a></li>
+      <li><span>Location</span><b>São Paulo, Brazil</b><br><small>Available for international productions</small></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>
+    <img src="https://www.erickdevasconcelos.com/assets/evs_logo_0d3a9f05.png" alt="EVS">
+    © 2026 Erick De Vasconcelos Studios, São Paulo, Brazil
+  </div>
+  <nav aria-label="Social media">
+    <a href="https://www.instagram.com/erickdevasconcelos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.7" r=".8" fill="currentColor" stroke="none"/></svg>Instagram</a>
+    <a href="https://www.linkedin.com/in/erickdevas/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.2 8.6a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6ZM3.7 10h3v10h-3V10Zm5.1 0h2.9v1.4h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.6V20h-3v-5c0-1.2 0-2.8-1.8-2.8s-2.1 1.3-2.1 2.7V20h-3V10Z"/></svg>LinkedIn</a>
+  </nav>
+</footer>
+
+<dialog id="lb" aria-label="Video player">
+  <div class="lb-bar"><span id="lb-title"></span><button id="lb-close">Close</button></div>
+  <div class="lb-frame" id="lb-frame"></div>
+</dialog>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+(() => {
+  const A = 'https://www.erickdevasconcelos.com/assets/';
+  /* mesmos projetos e vídeos do site atual */
+  const projects = [
+    {title:'GAC Festival Interlagos', cat:'Events', vimeo:'1182709952', thumb:'thumb_gac_8d53accf.jpg'},
+    {title:'Microsoft & Fast Lane', cat:'Branded Content / International', vimeo:'1182666176', thumb:'thumb_microsoft_29b1995a.jpg'},
+    {title:'The Wine Project NYC', cat:'International Production', vimeo:'903821636', thumb:'thumb_wine_db5b0e0c.jpg'},
+    {title:'Michelin Connected Fleet', cat:'Branded Documentary / International', vimeo:'694086632', thumb:'thumb_michelin_2a99feaa.jpg'},
+    {title:'Creative Mornings SP', cat:'Brand Storytelling', vimeo:'1036500454', thumb:'thumb_creative_67090d21.jpg'},
+    {title:'Demo Reel EVS', cat:'Portfolio', vimeo:'839737105', thumb:'thumb_reel_a89edcbc.jpg'},
+    {title:'Agente Imóvel', cat:'Branded Content', vimeo:'1035745052', thumb:'thumb_agente_imovel_73bf4ac4.jpg'},
+    {title:'Michelin — Fenatran 2024', cat:'Events', vimeo:'1036501304', thumb:'thumb_fenatran_13438e79.jpg'}
+  ];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- lista de trabalhos ---------- */
+  const rows = document.getElementById('rows');
+  rows.innerHTML = projects.map(p => `
+    <li><button class="row" aria-expanded="false" data-vimeo="${p.vimeo}" data-title="${p.title}" data-thumb="${A+p.thumb}">
+      <img class="thumb" src="${A+p.thumb}" alt="" loading="lazy">
+      <span class="t">${p.title}</span><span class="c">${p.cat}</span><span class="go">Watch</span>
+    </button></li>`).join('');
+
+  const peek = document.getElementById('peek'), peekimg = document.getElementById('peekimg');
+  projects.forEach(p => { const i = new Image(); i.src = A+p.thumb; }); // pré-carrega
+  addEventListener('scroll', () => peek.classList.remove('on'), {passive:true});
+  rows.querySelectorAll('.row').forEach(r => {
+    r.addEventListener('mouseenter', () => { peekimg.src = r.dataset.thumb; peek.classList.add('on'); });
+    r.addEventListener('mouseleave', () => peek.classList.remove('on'));
+    r.addEventListener('mousemove', e => { peek.style.left = Math.min(innerWidth - 240, e.clientX + 260) + 'px'; peek.style.top = e.clientY + 'px'; });
+  });
+
+  /* ---------- créditos: duplica a lista para o loop não ter emenda ---------- */
+  const roll = document.getElementById('roll');
+  if (!reduce) roll.insertAdjacentHTML('beforeend', roll.innerHTML.replace(/<li>/g, '<li aria-hidden="true">'));
+
+  /* ---------- lightbox ---------- */
+  const lb = document.getElementById('lb'), lbf = document.getElementById('lb-frame'), lbt = document.getElementById('lb-title');
+  function openVideo(id, title){
+    lbt.textContent = title;
+    lbf.innerHTML = `<iframe id="lightbox-video" src="https://player.vimeo.com/video/${id}?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${title}"></iframe>`;
+    lb.showModal();
+    if (String(id) === '839737105' && window.Vimeo) {
+      const reel = new Vimeo.Player(document.getElementById('lightbox-video'));
+      reel.on('timeupdate', d => { if (d.duration && d.seconds >= d.duration - 3.2) reel.pause().catch(()=>{}); });
+    }
+  }
+  lb.addEventListener('close', () => { lbf.innerHTML = ''; });
+  document.getElementById('lb-close').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-vimeo]');
+    if (!b || b.tagName === 'IFRAME') return;
+    const isMobileLayout = matchMedia('(max-width: 900px)').matches;
+    if (isMobileLayout && b.classList.contains('row') && !b.classList.contains('preview-open')) {
+      b.classList.add('preview-open');
+      b.setAttribute('aria-expanded', 'true');
+      return;
+    }
+    openVideo(b.dataset.vimeo, b.dataset.title);
+  });
+
+  /* ---------- hero: o quadro abre com o scroll ---------- */
+  const hero = document.querySelector('.hero'), stage = document.getElementById('stage');
+  function onScroll(){
+    if (reduce) return;
+    const total = hero.offsetHeight - innerHeight;
+    const p = Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / total));
+    const e = 1 - Math.pow(1 - p, 3);
+    stage.style.setProperty('--p', e.toFixed(4));
+    stage.style.setProperty('--zoom', (1.12 - .12 * e).toFixed(4));
+  }
+  const nav = document.querySelector('.nav');
+  addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > hero.offsetHeight - 80), {passive:true});
+  addEventListener('scroll', onScroll, {passive:true}); addEventListener('resize', onScroll); onScroll();
+
+  /* ---------- reel de fundo, sem mostrar os 3s finais do arquivo ---------- */
+  const frame = document.getElementById('frame');
+  if (window.Vimeo) {
+    const bg = new Vimeo.Player(document.getElementById('bgreel'));
+    bg.on('play', () => frame.classList.add('playing'));
+    let resettingReel = false;
+    bg.on('timeupdate', d => {
+      if (!resettingReel && d.duration && d.seconds >= d.duration - 3.2) {
+        resettingReel = true;
+        bg.setCurrentTime(0).then(() => { resettingReel = false; }).catch(() => { resettingReel = false; });
+      }
+    });
+    if (reduce) bg.pause().catch(()=>{});
+  }
+
+  /* ---------- cursor customizado em todo o site ---------- */
+  const cur = document.querySelector('.cursor'), play = document.getElementById('play');
+  addEventListener('mousemove', e => { cur.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; }, {passive:true});
+  play.addEventListener('mouseenter', () => cur.classList.add('on'));
+  play.addEventListener('mouseleave', () => cur.classList.remove('on'));
+  document.addEventListener('mouseover', e => cur.classList.toggle('interactive', Boolean(e.target.closest('a,button'))));
+  play.addEventListener('click', () => cur.classList.remove('on'));
+
+  /* ---------- formulário (mesmo envio do site atual) ---------- */
+  const form = document.getElementById('form'), status = document.getElementById('status');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const bad = [...form.querySelectorAll('[required]')].find(i => !i.value.trim() || !i.checkValidity());
+    if (bad) { status.textContent = bad.type === 'email' ? 'Please enter a valid email address.' : `Please fill in ${bad.labels[0].textContent.toLowerCase()}.`; bad.focus(); return; }
+    const btn = form.querySelector('button'); btn.disabled = true; status.textContent = 'Sending…';
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/contato@erickdevasconcelos.com', {method:'POST', headers:{Accept:'application/json'}, body:new FormData(form)});
+      if (!r.ok) throw 0;
+      status.textContent = 'Message sent. We’ll be in touch soon.'; form.reset();
+    } catch {
+      status.textContent = 'Could not send your message. Please email contato@erickdevasconcelos.com.'; btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
