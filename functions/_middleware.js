@@ -4,10 +4,29 @@
  * All other countries and territories are served in English.
  */
 const PORTUGUESE_COUNTRIES = new Set(['BR', 'PT', 'AO', 'MZ', 'TL']);
+const LEGACY_SECTION_PATHS = {
+  '/contato': '#contato',
+  '/clientes': '#cl',
+  '/sobre-erick': '#sobre',
+};
 
 export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
+
+  // Keep one canonical hostname while leaving the non-www address usable.
+  if (url.hostname === 'erickdevasconcelos.com') {
+    url.hostname = 'www.erickdevasconcelos.com';
+    url.protocol = 'https:';
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: url.toString(),
+        'Cache-Control': 'public, max-age=3600',
+      },
+    });
+  }
+
   const currentPath = url.pathname;
   const langMatch = currentPath.match(/^\/(pt-BR|en)(?=\/|$)/);
   const language = langMatch?.[1];
@@ -35,12 +54,16 @@ export async function onRequest(context) {
   if (!hasLangPrefix) {
     const country = request.cf?.country || 'XX';
     const targetLang = PORTUGUESE_COUNTRIES.has(country) ? 'pt-BR' : 'en';
-    const newPath = `/${targetLang}${currentPath === '/' ? '/' : currentPath}`;
+    const normalizedPath = currentPath.replace(/\/+$/, '') || '/';
+    const legacyAnchor = LEGACY_SECTION_PATHS[normalizedPath];
+    const newPath = legacyAnchor
+      ? '/' + targetLang + '/' + legacyAnchor
+      : '/' + targetLang + (currentPath === '/' ? '/' : currentPath);
     return new Response(null, {
-      status: 302,
+      status: legacyAnchor ? 301 : 302,
       headers: {
-        Location: `${url.origin}${newPath}${url.search}`,
-        'Cache-Control': 'no-store, no-cache, must-revalidate',
+        Location: url.origin + newPath + url.search,
+        'Cache-Control': legacyAnchor ? 'public, max-age=3600' : 'no-store, no-cache, must-revalidate',
       },
     });
   }
